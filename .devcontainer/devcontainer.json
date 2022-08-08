@@ -1,0 +1,56 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.1/containers/javascript-node
+{
+	"name": "Nest API Learning",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"workbench.iconTheme": "vscode-icons",
+				"[typescript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"vsicons.dontShowNewVersionMessage": true,
+				"git.autofetch": true,
+				"git.confirmSync": false,
+				"files.associations": {
+					"*.env.*": "env",
+					"*.env.development": "env",
+					"*.env.test": "env",
+					"*.env.production": "env",
+					"*.env.local": "env",
+					"*.env.*.local": "env"
+				},
+				"git.suggestSmartCommit": false,
+				"typescript.suggestionActions.enabled": false,
+				"javascript.suggestionActions.enabled": false
+			},
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"irongeek.vscode-env",
+				"github.vscode-pull-request-github",
+				"eamodio.gitlens",
+				"ckolkman.vscode-postgres"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+	"features": {
+		"git": "os-provided",
+		"github-cli": "latest"
+	}
+}
